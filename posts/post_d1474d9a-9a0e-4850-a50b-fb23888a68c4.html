@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make and build stuff you need! - Personal Thoughts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="nav-back">
+        <a href="../index.html">← Back to Blog</a>
+        <button class="share-btn" onclick="copyShareLink()" style="margin-left: 20px; background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.9rem;">🔗 Share</button>
+    </div>
+
+    <article class="post-detail">
+        <div class="cover-container"><img class="cover-img" src="https://picsum.photos/seed/d1474d9a-9a0e-4850-a50b-fb23888a68c4/1200/600" alt="Cover banner"></div>
+        
+        <header class="post-header">
+            <h1 class="post-title-detail">Make and build stuff you need!</h1>
+            <div class="post-meta">
+                <span class="post-date">June 28, 2026</span>
+                <span class="post-divider">•</span>
+                <span class="post-category" style="color: #D83B01; font-weight: 600;">Blog</span>
+                
+            </div>
+        </header>
+
+        <section class="post-content">
+            <p>As I have spend days and weeks and months learning stuff, now I see how things mainly work so I have started to build small apps or things that I require for my day to day need using AI, and after hearing this you may say that &quot;AH AGAIN AI CRAP&quot; but listen its a tool that we can use to make</p>
+            
+        </section>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 Personal Thoughts. Generated via JournalApp.</p>
+    </footer>
+
+    <!-- Overlay Lightbox Container -->
+    <div id="lightbox" onclick="closeLightbox()" style="display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.25s ease; cursor: pointer;">
+        <img id="lightbox-img" src="" style="max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 4px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); transform: scale(0.95); transition: transform 0.25s ease;" alt="Enlarged photo">
+    </div>
+
+    <script>
+        function copyShareLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Link copied to clipboard!');
+        }
+        function openLightbox(url) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = url;
+            lightbox.style.display = 'flex';
+            setTimeout(() => {
+                lightbox.style.opacity = '1';
+                img.style.transform = 'scale(1)';
+            }, 10);
+        }
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            lightbox.style.opacity = '0';
+            img.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+            }, 250);
+        }
+    </script>
+</body>
+</html>
