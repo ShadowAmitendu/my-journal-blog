@@ -12,18 +12,19 @@
 <body>
     <div class="nav-back">
         <a href="../index.html">← Back to Blog</a>
+        <button class="share-btn" onclick="copyShareLink()" style="margin-left: 20px; background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.9rem;">🔗 Share</button>
     </div>
 
     <article class="post-detail">
         
         
         <header class="post-header">
-            <h1 class="post-title">New Journal Entry</h1>
-            <div class="post-meta-container">
+            <h1 class="post-title-detail">New Journal Entry</h1>
+            <div class="post-meta">
                 <span class="post-date">June 28, 2026</span>
-                <span class="category-badge" style="background-color: #D83B0112; color: #D83B01; border: 1px solid #D83B0125;">Blog</span>
+                <span class="post-divider">•</span>
+                <span class="post-category" style="color: #D83B01; font-weight: 600;">Blog</span>
                 
-                <div class="tags-list"></div>
             </div>
         </header>
 
@@ -35,5 +36,12 @@
     <footer>
         <p>&copy; 2026 Personal Thoughts. Generated via JournalApp.</p>
     </footer>
+
+    <script>
+        function copyShareLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Link copied to clipboard!');
+        }
+    </script>
 </body>
 </html>
