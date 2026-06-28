@@ -62,6 +62,11 @@ body {
 .post-item {
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 40px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.post-item:hover {
+    opacity: 0.85;
 }
 
 .post-item:last-child {
